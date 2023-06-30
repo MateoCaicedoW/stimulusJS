@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stimulus prueba</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/index.js" defer type="module"></script>
+</head>
+<body class="bg-green-500 h-[100vh]">
+    <div class="grid grid-cols-2 p-4">
+        <div class="h-full w-full grid gap-3 grid-cols-3" data-controller="car-dealer" data-car-dealer-target="container">
+            <div class=" flex flex-col justify-center items-center" data-car-dealer-target="addButton">
+                <div>
+                    <button class="rounded-full">
+                        <img class="rounded-full" data-action="click->car-dealer#addCar" src="plus.png" alt="turn on" width="150" >
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div data-controller="inventory" class="flex flex-col justify-center items-center">
+            <p class="font-bold text-[50px]" data-inventory-target="count" data-action="car-dealer:car-added@window->inventory#countCars">
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
