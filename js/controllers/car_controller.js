@@ -8,7 +8,6 @@ export default class extends Controller {
         this.imageTarget.setAttribute("data-action", "click->car#turnOff")
     }
 
-
     turnOff() {
         this.imageTarget.setAttribute("src", "pngwing.com.png")
         this.imageTarget.setAttribute("data-action", "click->car#turnOn")

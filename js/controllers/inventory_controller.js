@@ -8,8 +8,8 @@ export default class extends Controller {
         this.countTarget.innerText = cars.length
     }
 
-    countCars(event){
-        this.countTarget.innerText = event.detail.count
+    countCars({detail : {count}}){
+        this.countTarget.innerText = count
     }
 
 }

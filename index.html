@@ -17,6 +17,28 @@
                     </button>
                 </div>
             </div>
+
+            <template data-car-dealer-target="carTemplate">
+                <div class="flex flex-col justify-center items-center" data-controller="car" data-car-target="container">
+                    <div class=" rounded-md bg-white p-3 text-center">
+                        <div class="flex justify-between">
+                            <p data-car-target="name">
+                                I'm a car
+                            </p>
+                            <button data-action="click->car#editName">
+                                <img src="edit_icon.png" alt="car" width="20">
+                            </button>
+                        </div>
+                        
+                        <button class="rounded-full">
+                            <img class="rounded-full"  data-action="click->car#turnOn" src="pngwing.com.png"alt="turn on" width="150" data-car-target="image">
+                        </button>
+                        <button>
+                            <img class="rounded-full"  data-action="click->car#remove" src="remove.png"alt="turn on" width="50" data-car-target="image">
+                        </button>
+                    </div>
+                </div>
+            </template>
         </div>
         <div data-controller="inventory" class="flex flex-col justify-center items-center">
             <p class="font-bold text-[50px]" data-inventory-target="count" data-action="car-dealer:car-added@window->inventory#countCars">
