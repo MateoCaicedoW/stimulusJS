@@ -1,0 +1,10 @@
+<script>
+    class MyController extends Controller {
+        static targets = [ "other" ]
+
+        copy() {
+            const otherController = this.application.getControllerForElementAndIdentifier(this.otherTarget, 'other')
+            otherController.otherMethod()
+        }
+    }
+</script>
